@@ -19,6 +19,8 @@ class Queue {
         }
         if(this.tail === null){
             this.tail = 0;
+        }else if(this.tail === this.longth && this.queue[0] === null){
+            this.tail = 0
         }else{
             ++this.tail;
         }
@@ -39,7 +41,8 @@ class Queue {
         }else if(this.head === null){
             return false
         }else if(this.head === this.longth){
-            let data = this.queue[this.head++]
+            let data = this.queue[this.head]
+            this.queue[this.head] = null
             this.head = 0
             console.log(data, 38)
             return data
@@ -60,6 +63,8 @@ class Queue {
         return this.queue[this.tail]
     }
 }
+
+//testing callbackfunctions aswell
 function alex(n){
     console.log(1+n, 57)
 }
@@ -75,3 +80,7 @@ a.deque()(9);
 console.log(a.show(), 65);
 a.enque("yolo");
 a.last();
+console.log(a.show(), 65);
+a.deque();
+a.last()
+console.log(a.show(), 85)
