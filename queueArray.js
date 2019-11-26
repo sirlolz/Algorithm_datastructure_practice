@@ -1,15 +1,10 @@
-class Queue {
+export default class Queue {
     constructor(size){
         this.head = null;
         this.tail = null;
         //storing que as an array
         this.queue = Array(size);
         this.longth = size - 1 
-    }
-
-    //returns the entire Queue also
-    show = () => {
-        return this.queue;
     }
 
     //adds data to end of queue
