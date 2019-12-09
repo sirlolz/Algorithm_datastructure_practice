@@ -4,9 +4,8 @@ export default class LinkedList {
         this.next = null;
     }
 
-    add = () => {
-        if(this.tail){
-
-        }
+    //used to extend a linked list
+    link = (data) => {
+        
     }
 }

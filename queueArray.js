@@ -1,4 +1,4 @@
-export default class Queue {
+class Queue {
     constructor(size){
         this.head = null;
         this.tail = null;
@@ -72,10 +72,3 @@ console.log(a.queue, 61);
 a.deque()(8);
 console.log(a.queue, 63);
 a.deque()(9);
-console.log(a.show(), 65);
-a.enque("yolo");
-a.last();
-console.log(a.show(), 65);
-a.deque();
-a.last()
-console.log(a.show(), 85)
